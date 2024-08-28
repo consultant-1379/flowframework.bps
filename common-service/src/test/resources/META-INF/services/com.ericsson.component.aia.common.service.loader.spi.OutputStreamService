@@ -1,0 +1,2 @@
+com.ericsson.component.aia.common.service.loader.spi.impl.FileOutputStreamService
+com.ericsson.component.aia.common.service.loader.spi.impl.HdfsOutputStreamService

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="urn:com:ericsson:schema:xml:oss:fbp_flow" xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" oc:ns="com.ericsson.oss.services" oc:name="CSLSolutionSet" oc:version="1.0.0">
+   <oc:modelCreationInfo author="eachsaj" creationDate="25/5/2016">
+      <oc:designedModel componentId="BatchProcessingSpark" />
+   </oc:modelCreationInfo>
+   <oc:desc>ExtEps Test for an extension Simple Batch Processing</oc:desc>
+  
+  <input name="input-stream"> 
+		#foreach($key in $attributeIPMap.keySet() )
+	    <attribute name="$key" value="$attributeIPMap.get($key)" />
+	   #end
+   </input>
+    
+   <output name="output-stream"> 
+       #foreach($key in $attributeOPMap.keySet() )
+	    <attribute name="$key" value="$attributeOPMap.get($key)" />
+	   #end
+   </output>
+   
+   <step name="sales-analysis">
+       #foreach($key in $attributeStepMap.keySet() )
+	    <attribute name="$key" value="$attributeStepMap.get($key)" />
+	   #end
+   </step>
+   
+   <path>
+      <from uri="input-stream" />
+      <to uri="sales-analysis" />
+      <to uri="output-stream" />
+   </path>
+
+</FlowDefinition>

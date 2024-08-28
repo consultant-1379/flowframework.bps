@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="urn:com:ericsson:schema:xml:oss:fbp_flow"
+	xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	oc:ns="com.ericsson.oss.services" oc:name="CSLSolutionSet" oc:version="1.0.0">
+
+	<oc:modelCreationInfo author="easchud"
+		creationDate="10/8/2016">
+		<oc:designedModel componentId="BatchProcessingSpark" />
+	</oc:modelCreationInfo>
+
+	<oc:desc>ExtEps Test for an extension Simple Batch Processing</oc:desc>
+
+	<input name="file-stream-csv">
+		 <attribute name="uri"
+			value="file:///C:\git\ashish\flowframework.bps\bps-integration\bps-spark-integration\src\test\resources\CTREvents.csv" />
+		<!--
+		<attribute name="uri"
+			value="file:////mnt/hgfs/gitrepo/ashish/flowframework.bps/bps-integration/bps-spark-integration/src/test/resources/CTREvents.csv" />
+		-->
+		<attribute name="header" value="true" /> 
+		<attribute name="inferSchema" value="true" />
+		<attribute name="drop-malformed" value="true" /> 
+		<attribute name="data.format" value="csv" />
+		<attribute name="quoteMode" value="ALL" />
+		<attribute name="skip-comments" value="true" />
+		<attribute name="quote" value="&quot;" />
+		<attribute name="persist" value="false" />
+		<attribute name="table-name" value="INTERNAL_PROC_UE_CTXT_RELEASE" />
+	</input>
+
+	<output name="kafka-out-put">
+		<attribute name="uri" value="kafka://ashish?format=avro" />
+		<attribute name="bootstrap.servers" value="ieatrcxb3652.athtem.eei.ericsson.se:9099" />
+		<attribute name="eventType" value="celltrace.s.ab11.INTERNAL_PROC_UE_CTXT_RELEASE" />
+		<attribute name="table-name" value="INTERNAL_PROC_UE_CTXT_RELEASE" /> 
+	</output> 
+
+ 	<step name="cell-analysis">
+		<attribute name="uri" value="spark-batch://cell-analysis" />
+		<attribute name="master.url" value="local[1]" />
+		<attribute name="sql"
+			value="SELECT * FROM INTERNAL_PROC_UE_CTXT_RELEASE" />
+	</step>
+
+	<path>
+		<from uri="file-stream-csv" />
+		<to uri="cell-analysis" />
+		<to uri="kafka-out-put" />
+	</path>
+</FlowDefinition>

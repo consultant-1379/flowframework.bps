@@ -1,0 +1,39 @@
+	------
+	BPS Downloads
+	------
+
+BPS Downloads
+
+ Here is the information to help you to download the release as per your requirement.
+ 	
+ 	BPS follows the following versioning strategy <<<MAJOR.MINOR.PATCH>>>:
+
+	 * <<<MAJOR>>> version when API level changes are introduced, which will cause incompatible with previous release, and
+	
+	 * <<<MINOR>>> version when new functionality is added in a backwards-compatible manner, and
+
+	 * <<<PATCH>>> version when bug fixed and make as backwards-compatible.
+
+ 
+ Current latest and stable <<<version ${project.version}>>> can be download from our nexus repo {{{https://arm101-eiffel004.lmera.ericsson.se:8443/nexus/content/groups/aia-repositories/com/ericsson/component/aia/bps/service/ } here }}
+ 
+ 
+ Release Notes
+
+	Manually generated, may be outdated
+  
+ 	*1.0.5 (11/08/2016)  
+ 		
+ 		Added basic documentation for BPS Maven site.
+	
+	*1.0.6 (11/08/2016)  
+	
+		Added flink support to BPS module.
+		
+	*1.0.7 (11/08/2016)  
+	
+		Fixed code review comments associated with flink module.
+		
+	*1.0.8 (12/08/2016)  
+	
+		Updated BPS documentation as per the feedback.

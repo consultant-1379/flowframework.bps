@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project xmlns="http://maven.apache.org/DECORATION/1.3.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd">
+	<bannerLeft>
+		<name>Beam Processing Service</name>
+		<href>http://www.ericsson.com/</href>
+	</bannerLeft>
+
+	<publishDate position="right" />
+
+	<bannerRight>
+		<src>images/logo.png</src>
+		<href>http://www.ericsson.com/</href>
+	</bannerRight>
+
+	<poweredBy>
+		<logo name="Ericsson" href="http://www.ericsson.com/" img="images/logo.png" />
+	</poweredBy>
+
+	<body>
+		<links>
+			<item name="AIA Portal"
+				href="http://atrcxb2560-1.athtem.eei.ericsson.se:8889/#aia" />
+		</links>
+		<menu name="Beam Processing Service">
+			<item name="Home" href="/index.html" />
+			<item name="Development" href="/development.html" />
+		</menu>
+		<menu name="BPS Service">
+			<item name="Quick Start" href="/bpsService.html" />
+			<item name="Templates" href="/templates.html" />
+			<item name="Architectural Design" href="/bpsSpi.html" />
+			<item name="Downloads" href="/downloads.html" />
+		</menu>
+		<menu name="BPS Runtime">
+			<item name="Quick Start" href="/bpsExtQuickStart.html" />
+			<item name="Spark Runtime" href="/sparkBpsRuntime.html" />
+			<item name="Flink Runtime" href="flinkBpsRuntime.html" />
+		</menu>
+		<menu name="Maven Reports">
+			<item name="Product Information" href="/product_info.html" />
+			<item name="Project Information" href="/project-info.html" />
+			<item name="Project Reports" href="/project-reports.html" />
+		</menu>
+
+	</body>
+
+	<skin>
+		<groupId>com.ericsson.cds</groupId>
+		<artifactId>ericsson-skin-stats</artifactId>
+		<version>1.0.1</version>
+	</skin>
+	<custom>
+		<uiStats>
+			<serverUrl>https://cds.ericsson.se/analytics/</serverUrl>
+			<siteId>21</siteId>
+		</uiStats>
+		<fluidoSkin>
+			<sourceLineNumbersEnabled>false</sourceLineNumbersEnabled>
+		</fluidoSkin>
+	</custom>
+</project>

@@ -1,0 +1,30 @@
+	------
+	BPS Spark JobRunner
+	------
+
+BPS Spark JobRunner
+
+[./images/spark_small.jpg]
+	
+	BPS support following spark specific JobRunner that can be configured as processing unit of the pipeline.
+
+[./images/SparkJobrunners.jpg]
+
+
+		* Spark batch job runner  
+		
++---------------------------------------------------------------------------------------------------------
+<step name="sales-analysis">
+    <attribute name="uri" value="spark-batch://cell-analysis"/>
+    <attribute name="sql" value="SELECT * FROM CELL_PERFORMANCE_DATA"/>
+</step>
++---------------------------------------------------------------------------------------------------------
+
+		* Spark batch job runner for local testing 
+
++---------------------------------------------------------------------------------------------------------
+<step name="sales-analysis">
+    <attribute name="uri" value="spark-batch-local://cell-analysis"/>
+    <attribute name="sql" value="SELECT * FROM CELL_PERFORMANCE_DATA"/>
+</step>
++---------------------------------------------------------------------------------------------------------

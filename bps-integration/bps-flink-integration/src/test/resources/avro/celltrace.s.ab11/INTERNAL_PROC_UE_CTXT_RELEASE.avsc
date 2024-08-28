@@ -1,0 +1,699 @@
+{
+  "type": "record",
+  "name": "INTERNAL_PROC_UE_CTXT_RELEASE",
+  "namespace": "celltrace.s.ab11",
+  "fields": [
+    {
+      "name": "_NE",
+      "type": "string"
+    },
+    {
+      "name": "_TIMESTAMP",
+      "type": "long"
+    },
+    {
+      "name": "_ID",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_HOUR",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_MINUTE",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_SECOND",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_MILLISEC",
+      "type": "int"
+    },
+    {
+      "name": "SCANNER_ID",
+      "type": "long"
+    },
+    {
+      "name": "RBS_MODULE_ID",
+      "type": "int"
+    },
+    {
+      "name": "GLOBAL_CELL_ID",
+      "type": "long"
+    },
+    {
+      "name": "ENBS1APID",
+      "type": "long"
+    },
+    {
+      "name": "MMES1APID",
+      "type": "long"
+    },
+    {
+      "name": "GUMMEI",
+      "type": "bytes"
+    },
+    {
+      "name": "RAC_UE_REF",
+      "type": "long"
+    },
+    {
+      "name": "TRACE_RECORDING_SESSION_REFERENCE",
+      "type": "bytes"
+    },
+    {
+      "name": "TRIGGERING_NODE",
+      "type": "int"
+    },
+    {
+      "name": "S1_RELEASE_CAUSE",
+      "type": "int"
+    },
+    {
+      "name": "P_3GPP_CAUSE_GROUP",
+      "type": "int"
+    },
+    {
+      "name": "P_3GPP_CAUSE",
+      "type": "int"
+    },
+    {
+      "name": "INTERNAL_RELEASE_CAUSE",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_1",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_2",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_3",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_4",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_5",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_6",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_7",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_8",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_9",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_10",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_11",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_12",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_13",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_14",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_15",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_DATA_LOST_16",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_1",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_2",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_3",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_4",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_5",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_6",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_7",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_8",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_9",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_10",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_11",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_12",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_13",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_14",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_15",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_SUCC_16",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_1",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_2",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_3",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_4",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_5",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_6",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_7",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_8",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_9",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_10",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_11",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_12",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_13",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_14",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_15",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_RELEASE_REQ_QCI_16",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_1",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_2",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_3",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_4",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_5",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_6",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_7",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_8",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_9",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_10",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_11",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_12",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_13",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_14",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_15",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_16",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_1",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_2",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_3",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_4",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_5",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_6",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_7",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_8",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_9",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_10",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_11",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_12",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_13",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_14",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_15",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_PREP_ERAB_FAIL_AND_DATA_LOST_16",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_1",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_2",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_3",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_4",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_5",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_6",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_7",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_8",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_9",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_10",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_11",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_12",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_13",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_14",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_15",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_HO_OUT_EXEC_ERAB_FAIL_AND_DATA_LOST_16",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_1",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_2",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_3",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_4",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_5",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_6",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_7",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_8",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_9",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_10",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_11",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_12",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_13",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_14",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_15",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_ARP_16",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_1",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_2",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_3",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_4",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_5",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_6",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_7",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_8",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_9",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_10",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_11",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_12",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_13",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_14",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_15",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PCI_16",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_1",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_2",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_3",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_4",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_5",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_6",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_7",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_8",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_9",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_10",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_11",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_12",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_13",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_14",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_15",
+      "type": "int"
+    },
+    {
+      "name": "EVENT_ARRAY_ERAB_SETUP_REQ_PVI_16",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_START_HOUR",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_START_MINUTE",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_START_SECOND",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_START_MILLISEC",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_STOP_HOUR",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_STOP_MINUTE",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_STOP_SECOND",
+      "type": "int"
+    },
+    {
+      "name": "TIMESTAMP_STOP_MILLISEC",
+      "type": "int"
+    },
+    {
+      "name": "TTI_BUNDLING_MODE",
+      "type": "int"
+    }
+  ]
+}

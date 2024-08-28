@@ -1,0 +1,49 @@
+	------
+	Project Development
+	------
+
+Project Development
+
+ Here is the information to help you get started with local development on the project.
+
+
+* Get the code
+
++---------------------
+git clone ssh://<SIGNUM>@gerrit.ericsson.se:29418/AIA/common/flowframework/flowframework.bps
++---------------------
+
+* Build client locally
+
+  Do a full build with integration tests.
+
++---------------------
+mvn clean install  
++---------------------
+
+  Do a build without tests
+
++---------------------
+mvn clean install -DskipTests=true
++---------------------
+
+  Do a build without checkstyle , PMD , Code-Coverage
+
++---------------------
+mvn clean install -Dcheckstyle.skip=true -Dpmd.skip=true  -Dcpd.skip=true -Djacoco.skip=true
++---------------------
+
+* Build documentation
+
+  With following command it will generate the site at <<target/site/index.html>>:
+
++---------------------
+mvn clean site -DskipTests=true
++---------------------
+
+  With following command it will generate the site at <<target/site/index.html>> with javadoc:
+
++---------------------
+mvn clean site -Dmaven.javadoc.skip=false
++---------------------
+ 

@@ -1,0 +1,69 @@
+	------
+	BPS Spark Data Sink
+	------
+
+BPS Spark Data Sink
+
+[./images/spark_small.jpg]
+	
+	BPS support following spark specific data sink that can be configured as output of the pipeline.
+
+[./images/SparkDataSinks.jpg]
+
+		* Configure File Data sink
+
++---------------------------------------------------------------------------------------------------------
+ <output name="file-out-put">
+      <attribute name="uri" value="file:///tmp/batch-op" />
+      <!-- If this enabled the data will not materialized -->
+      <attribute name="data.format" value="json" /> <!-- json,text,orc,parquet --> 
+</output>
++---------------------------------------------------------------------------------------------------------	
+			
+		* Hive Data Sink
+
++---------------------------------------------------------------------------------------------------------
+  <output name="hive-output">
+    <attribute name="uri" value="hive://output_hdfs_text_input"/>
+    <!-- If this enabled the data will not materialized -->
+    <attribute name="data.format" value="parquet"/>
+    <attribute name="partition.columns" value="GLOBAL_CELL_ID"/>
+    <attribute name="data.save.mode" value="Append"/>
+  </output>
++---------------------------------------------------------------------------------------------------------	
+	
+		
+		* Jdbc Data Sink
+			
++---------------------------------------------------------------------------------------------------------
+<output name="jdbc-output">
+    <attribute name="uri" value="JDBC://jdbc:postgresql://127.0.0.1:5432/aiademo"/>
+    <attribute name="jdbc.driver" value="org.postgresql.Driver"/>
+    <attribute name="jdbc.user" value="aiauser"/>
+    <attribute name="jdbc.password" value="aiauser"/>
+    <attribute name="table" value="cell_ana_report_local_text_input"/>
+ </output>
++---------------------------------------------------------------------------------------------------------	
+	
+			
+		* HDFS Data Sink 
+			
++---------------------------------------------------------------------------------------------------------
+  <output name="hdfs-json-output">
+    <attribute name="uri" value="hdfs:///user/vagrant/output/json_cell_input"/>
+    <attribute name="data.format" value="json"/><!-- json,text,orc,parquet -->
+    <attribute name="partition.columns" value="global_cell_id"/>
+  </output>
++---------------------------------------------------------------------------------------------------------	
+
+		* Alluxio Data Sink 
+
++---------------------------------------------------------------------------------------------------------
+<output name="alluxio-parquet-output">
+    <attribute name="uri" value="alluxio://output/parquet_output_hdfs_text_input"/>
+    <!-- If this enabled the data will not materialized -->
+    <attribute name="data.format" value="parquet"/>
+    <attribute name="partition.columns" value="global_cell_id"/>
+    <attribute name="master-url" value="alluxio://localhost:19998"/>
+</output>
++---------------------------------------------------------------------------------------------------------

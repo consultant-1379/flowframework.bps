@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>common-service</artifactId>
+	<name>AIA COMMON SERVICE</name>
+	<parent>
+		<groupId>com.ericsson.component.aia.bps.service</groupId>
+		<artifactId>bps-service</artifactId>
+		<version>1.0.15-SNAPSHOT</version>
+	</parent>
+	<properties>
+		<version.metamodels>2.0.15</version.metamodels>
+		<java.version>1.7</java.version>
+		<slf4j_api.version>1.7.21</slf4j_api.version>
+		<guava.version>18.0</guava.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

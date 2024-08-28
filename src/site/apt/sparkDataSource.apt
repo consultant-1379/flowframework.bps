@@ -1,0 +1,71 @@
+	------
+	BPS Spark Data Source
+	------
+
+BPS Spark Data Source
+
+[./images/spark_small.jpg]
+	
+	BPS support following spark specific data sources that can be configured as input to the pipeline.
+
+[./images/SparkDataSource.jpg]
+
+		* Configure File Data Source
+
++---------------------------------------------------------------------------------------------------------
+<input name="local-text-input">
+    <attribute name="uri" value="file:///home/vagrant/input/cell_ana_report_text"/>
+    <attribute name="header" value="true"/><!-- if this false define
+      schema in json format and use the option -Dheader on deployment -->
+    <attribute name="inferSchema" value="true"/>
+    <attribute name="drop-malformed" value="true"/>
+    <attribute name="dateFormat" value="SimpleDateFormat"/>
+    <attribute name="data.format" value="text"/>
+    <attribute name="skip-comments" value="true"/>
+    <attribute name="quote" value="&quot;"/>
+    "<!-- If this enabled the data will be materialized , otherwise will dropped
+      after finishing job -->
+    <attribute name="table-name" value="CELL_PERFORMANCE_DATA"/>
+ </input>
++---------------------------------------------------------------------------------------------------------	
+			
+		* Hive Data Source
+
++---------------------------------------------------------------------------------------------------------
+  <input name="hive-input">
+    <attribute name="uri" value="hive://hdfs_par_input"/>
+  </input>
++---------------------------------------------------------------------------------------------------------	
+	
+		
+		* Jdbc Data Source
+			
++---------------------------------------------------------------------------------------------------------
+<input name="local-text-input">
+    <attribute name="uri" value="file:///home/vagrant/input/cell_ana_report_text"/>
+    <attribute name="header" value="true"/><!-- if this false define
+      schema in json format and use the option -Dheader on deployment -->
+    <attribute name="inferSchema" value="true"/>
+    <attribute name="drop-malformed" value="true"/>
+    <attribute name="dateFormat" value="SimpleDateFormat"/>
+    <attribute name="data.format" value="text"/>
+    <attribute name="skip-comments" value="true"/>
+    <attribute name="quote" value="&quot;"/>
+    "<!-- If this enabled the data will be materialized , otherwise will dropped
+      after finishing job -->
+    <attribute name="table-name" value="CELL_PERFORMANCE_DATA"/>
+ </input>
++---------------------------------------------------------------------------------------------------------	
+	
+			
+		* HDFS Data Source 
+			
++---------------------------------------------------------------------------------------------------------
+ <input name="hdfs-json-input">
+    <attribute name="uri" value="hdfs:///user/vagrant/input/cell_ana_report_json"/>
+    <attribute name="header" value="true"/>
+    <attribute name="data.format" value="json"/>
+    <attribute name="table-name" value="CELL_PERFORMANCE_DATA"/>
+  </input>
++---------------------------------------------------------------------------------------------------------	
+	

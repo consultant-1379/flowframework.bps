@@ -1,0 +1,41 @@
+	------
+	The BPS Service Provider Interface
+	------
+
+The BPS Service Provider Interface
+
+	BPS architecture is based on <<S>>ervice <<P>>rovider <<I>>nterface <<(SPI)>> to extend it without modifying its original code base. \
+	BPS contributors can add new functionality or application programming interfaces (APIs) by adding a new Java Archive (JAR) file onto the class path or into an specific extension directory.
+	
+	This section provides detail over view of BPS specific SPI's which are intended to address specific aspect of BPS requirements. \
+	{{{ https://docs.oracle.com/javase/tutorial/ext/basics/spi.html } Refer Java SPI Tutorial for more details }}
+	
+[./images/SPI.JPG]
+	
+	BPS functionality which required SPI support, needs to implement <<<GenericService>>> interface or variant of it. \
+	Currently three variant of <<<GenericService>>>  are depicted in above diagram.
+		  
+	* BPS Data Source
+
+	Data source represent the source of input which needs to be feed to the pipeline.
+	
+[./images/bpsDataSourceService.JPG]
+
+	{{{/apidocs/index.html} For more details refer Java API Documentation }}
+
+	* BPS Step
+	
+	Step represent logic unit of work that consume input and apply transformation on it and generate desired output.
+
+[./images/bpsJobRunner.JPG]
+
+	{{{/apidocs/index.html} For more details refer Java API Documentation }}
+		
+	* BPS Data Sink 
+
+	Data sink provides mechanism to persist the out come of the steps
+
+[./images/bpsDataSinkService.JPG]
+
+	{{{/apidocs/index.html} For more details refer Java API Documentation }}
+ 

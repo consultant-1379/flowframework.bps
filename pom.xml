@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.ericsson.aia</groupId>
+		<artifactId>integration</artifactId>
+		<version>1.0.37</version>
+	</parent>
+
+	<groupId>com.ericsson.component.aia.bps.service</groupId>
+	<artifactId>bps-service</artifactId>
+	<version>1.0.15-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>Beam Processing Service</name>
+
+	<properties>
+		<git.repository>AIA/common/flowframework/flowframework.bps</git.repository>
+		<version.metamodels>2.0.15</version.metamodels>
+		<version_flow_framework>2.0.9</version_flow_framework>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<hadoop.version>2.6.0</hadoop.version>
+		<zookeeper.version>3.4.6</zookeeper.version>
+		<hive.group>org.spark-project.hive</hive.group>
+		<!-- Version used in Maven Hive dependency -->
+		<hive.version>0.13.1a</hive.version>
+		<!-- Version used for internal directory structure -->
+		<avro.version>1.7.7</avro.version>
+		<scala.binary.version>2.10</scala.binary.version>
+		<scala.version>2.10.6</scala.version>
+		<spark.version>1.6.0</spark.version>
+		<eventflow-api.version>1.0.10</eventflow-api.version>
+		<maven-site-plugin.version>3.3</maven-site-plugin.version>
+		<maven-compiler-plugin.version>1.7</maven-compiler-plugin.version>
+		<!-- Added inorder to generate java docs with minor errors when use jdk 
+			1.8 -->
+		<additionalparam>-Xdoclint:none</additionalparam>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.ericsson.aia.itpf.common.flow</groupId>
+				<artifactId>eventflow-api</artifactId>
+				<version>${eventflow-api.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>${maven-site-plugin.version}</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${maven-compiler-plugin.version}</source>
+					<target>${maven-compiler-plugin.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>
+		<module>common-service</module>
+		<module>bps-core</module>
+		<module>bps-engine</module>
+		<module>bps-spark</module>
+		<module>bps-flink</module>
+		<module>bps-integration</module>
+	</modules>
+
+	<scm>
+		<developerConnection>${ericsson.scm.url}</developerConnection>
+		<connection>${ericsson.scm.url}</connection>
+		<tag>HEAD</tag>
+	</scm>
+
+</project>

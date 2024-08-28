@@ -1,0 +1,14 @@
+	------
+	The BPS Runtime
+	------
+
+The BPS Runtime
+
+	The intention of BPS runtime is to provide support for latest streaming and batch processing platform. \
+	In order to address the limitation and constraint of existing Big Data supporting technologies , new emerging elegant solution is provided by open source community.\
+	BPS runtime will not only address existing technology need but also provide support for emerging Big Data technologies. 
+	
+
+How new runtime can be supported ?
+
+	This is very simple just refer the SPI provision for more details {{{./bpsSpi.html}here}}.

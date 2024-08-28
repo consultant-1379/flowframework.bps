@@ -1,0 +1,119 @@
+	------
+	The Beam Processing Service
+	------
+
+Basic Component of <B>eam <P>rocessing <S>ervice <<(BPS)>>
+
+	Simplest form of BPS pipeline can be depicted as follow:
+
+[./images/pipe.jpg]
+	
+	BPS pipeline has three important aspects: <<<multiple input data sources>>> , <<<steps>>> <( current implementation supports single step only)> and <<<multiple output data sinks>>>.
+
+What is Pipe ?
+
+		Pipeline represents data processing job. User builds simple pipeline based on flow xml supported by BPS. \
+		Pipeline consists of set of operations that can read source of input data, transform that data, and write out the resulting output.\ 	  
+	 	
+		Example of Pipe:
+
++---------------------------------------------------------------------------------------------------------
+ <path>
+    <from uri="file-stream-csv" />
+    <to uri="sales-analysis" />
+    <to uri="file-out-put" />
+ </path>
++---------------------------------------------------------------------------------------------------------
+			 	
+What is Data Source ?	
+	
+		Data source represents the various sources which are fed to the pipeline as input in order to carry-out various operations on.
+		
+		Example of Data Source:
+
++---------------------------------------------------------------------------------------------------------
+ <input name="file-stream-csv">
+      <attribute name="uri" value="file:///@CurrentPath@SalesJan2009.csv" />
+      <attribute name="header" value="true" />
+      <attribute name="inferSchema" value="true" />
+      <attribute name="drop-malformed" value="true" />
+      <attribute name="dateFormat" value="SimpleDateFormat" />
+      <attribute name="data.format" value="text" />
+      <attribute name="skip-comments" value="true" />
+      <attribute name="quote" value="&quot;" />
+      <attribute name="table-name" value="sales" />
+ </input>
++---------------------------------------------------------------------------------------------------------
+		
+		There are various examples of BPS Spark Data Source to be found {{{./sparkDataSource.html}here}}.
+
+What is Step?			
+	
+		Step is a logical operation that can be applied on input data in order to carry-out specific transformation or manipulate on input data in order to obtain desired output.  
+		
+		Example of Step:
+
++---------------------------------------------------------------------------------------------------------
+ <step name="sales-analysis">
+      <attribute name="master.url" value="local[*]" />	
+      <attribute name="uri" value="spark-batch://sales-analysis" />
+      <attribute name="sql" value="SELECT * FROM sales" />
+ </step>
++---------------------------------------------------------------------------------------------------------
+		There are various examples of BPS Spark JobRunner to be found {{{./sparkjobrunner.html}here}}.
+		BPS supports many job runners in order to process multiple input data sources and apply specific business logic on it.
+		
+What is Data Sink?				
+
+
+		Data sink is the final destination where processed/transformed data needs to be persisted.
+		
+		Example of Data Sink:
+
++---------------------------------------------------------------------------------------------------------
+ <output name="file-out-put">
+      <attribute name="uri" value="file:///tmp/batch-op" />
+      <attribute name="data.format" value="json" />
+ </output>
++---------------------------------------------------------------------------------------------------------
+		
+		There are various examples of BPS Spark Data Sink to be found {{{./sparkDataSink.html}here}}.
+				
+		All elements listed above make up <<<flow.xml>>> file. 
+		
+		Example of flow.xml file:
+		
++---------------------------------------------------------------------------------------------------------
+ <?xml version="1.0" encoding="UTF-8"?>
+ <FlowDefinition xmlns="urn:com:ericsson:schema:xml:oss:fbp_flow" xmlns:oc="urn:com:ericsson:schema:xml:oss:oss_common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" oc:ns="com.ericsson.oss.services" oc:name="CSLSolutionSet" oc:version="1.0.0">
+ <oc:modelCreationInfo author="eachsaj" creationDate="25/5/2016">
+ <oc:designedModel componentId="BatchProcessingSpark" />
+ </oc:modelCreationInfo>
+ <oc:desc>ExtEps Test for an extension Simple Batch Processing</oc:desc>
+   <input name="file-stream-csv">
+      <attribute name="uri" value="file:///@CurrentPath@SalesJan2009.csv" />
+      <attribute name="header" value="true" />
+      <attribute name="inferSchema" value="true" />
+      <attribute name="drop-malformed" value="true" />
+      <attribute name="dateFormat" value="SimpleDateFormat" />
+      <attribute name="data.format" value="text" />
+      <attribute name="skip-comments" value="true" />
+      <attribute name="quote" value="&quot;" />
+      <attribute name="table-name" value="sales" />
+   </input>
+   <output name="file-out-put">
+      <attribute name="uri" value="file:///tmp/batch-op" />
+      <attribute name="data.format" value="json" /> <!-- json,text,orc,parquet --> 
+   </output>
+   <step name="sales-analysis">
+      <attribute name="master.url" value="local[*]" />	
+      <attribute name="uri" value="spark-batch://sales-analysis" />
+      <attribute name="sql" value="SELECT * FROM sales" />
+   </step>
+   <path>
+      <from uri="file-stream-csv" />
+      <to uri="sales-analysis" />
+      <to uri="file-out-put" />
+   </path>
+</FlowDefinition>
++---------------------------------------------------------------------------------------------------------

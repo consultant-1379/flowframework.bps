@@ -1,0 +1,61 @@
+	------
+	Beam Processing Service
+	------
+
+What is <B>eam <P>rocessing <S>ervice <<(BPS)>>?
+
+	<BPS> is an unified batch and stream processing model that you can use to create a data processing pipeline based on simple flow. \
+	Flow design is based on strong conventions and best practices,which allows you to rapidly create,test and verify domain specific logic.\
+	Pipeline designer will focused on domain specific logic whereas BPS provides higher level of abstraction for input and output.
+
+~~	<BPS> is a bound together bunch and stream handling model that you can use to make an information preparing pipeline taking into account straightforward stream. 
+~~	Stream outline depends on solid traditions and best practices,which permits you to quickly create,test and confirm space particular rationale. 
+~~	Pipeline planner will concentrated on space particular rationale though BPS gives larger amount of reflection to information and yield.
+
+	AIA provides templating functionality where user can select different templates supported by BPS. \
+	User can refer to {{{http://analytics.ericsson.se/paas-ui/index.html#create-app } AIA application builder }} and opt for any template<<<*>>>  to build new application.
+	
+		* Batch Processing (Spark based)
+			
+			This template demonstrates how to process a batch of events coming on Kafka or any other File sources(SQL and NoSQL).
+			
+		* Mediation Application  
+			
+			A template for creating the mediation applications
+			
+		* Streaming Processing (Spark based)  
+			
+			This template demonstrates how to process a stream of events, using Apache Spark. The template covers different cases on how to integrate with inbound streams, for example Apache Kafka.
+			  
+		<<<*>>> Only available option will be enabled on AIA portal
+		
+[./images/bps_small.JPG]
+
+	Currently BPS has following support 
+	
+*--------------------------------------------------------*----------------------------------------------------*
+||Data Source<<<**>>>                                            || Data Sink<<<**>>>                                       |
+*--------------------------------------------------------*----------------------------------------------------*
+| {{{ http://hadoop.apache.org/ } Hadoop }}	             | {{{ http://hadoop.apache.org/ } Hadoop }}	      |
+*--------------------------------------------------------*----------------------------------------------------*
+| {{{ https://hive.apache.org/ } Hive }}       	         | {{{ https://hive.apache.org/ } Hive }}	          |
+*--------------------------------------------------------*----------------------------------------------------*
+|{{{ https://en.wikipedia.org/wiki/Java_Database_Connectivity } JDBC}} | {{{ https://en.wikipedia.org/wiki/Java_Database_Connectivity } JDBC}}          |
+*--------------------------------------------------------*----------------------------------------------------*
+|  										     	         | {{{ http://kafka.apache.org/ } Kafka }}	          |
+*--------------------------------------------------------*----------------------------------------------------*
+|  										     	         | {{{ http://www.alluxio.org/ } Alluxio}}            |
+*--------------------------------------------------------*----------------------------------------------------*
+  
+  (<<<**>>>) Support is depends on type of template selected for development.
+
+About the client project
+ 
+	The current version of BPS project provides JDBC,HDFS,FILE,HIVE integration into
+	AIA infrastructure with relevant client, tools and documentation. 
+	Support for Streaming and Kafka will be provided in future releases. 
+
+
+BPS Runtime
+
+	BPS Runtime is based on Service Provider Interface (SPI) so that it can be customized or enhanced easily.

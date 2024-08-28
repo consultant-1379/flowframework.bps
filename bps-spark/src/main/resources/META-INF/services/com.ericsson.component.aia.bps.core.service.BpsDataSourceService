@@ -1,0 +1,4 @@
+com.ericsson.component.aia.bps.spark.datasourceservice.BpsSparkJdbcDataSourceService
+com.ericsson.component.aia.bps.spark.datasourceservice.BpsSparkHiveDataSourceService
+com.ericsson.component.aia.bps.spark.datasourceservice.BpsSparkHdfsDataSourceService
+com.ericsson.component.aia.bps.spark.datasourceservice.BpsSparkFileDataSourceService

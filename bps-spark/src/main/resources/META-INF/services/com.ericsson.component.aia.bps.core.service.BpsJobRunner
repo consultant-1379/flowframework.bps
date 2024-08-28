@@ -1,0 +1,3 @@
+com.ericsson.component.aia.bps.spark.jobrunner.LocalSparkSQLJobRunner
+com.ericsson.component.aia.bps.spark.jobrunner.SparkSQLJobRunner
+com.ericsson.component.aia.bps.spark.jobrunner.SparkBatchJobRunner

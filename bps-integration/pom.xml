@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>bps-integration</artifactId>
+	<name>Beam Integration Testing</name>
+	<packaging>pom</packaging>
+	<parent>
+		<groupId>com.ericsson.component.aia.bps.service</groupId>
+		<artifactId>bps-service</artifactId>
+		<version>1.0.15-SNAPSHOT</version>
+	</parent>  
+	<dependencies>
+		<dependency>
+				<groupId>com.ericsson.component.aia.bps.service</groupId>
+				<artifactId>bps-engine</artifactId>
+				<version>${project.version}</version>
+				<scope>test</scope>
+			</dependency>
+	</dependencies>
+	<modules> 
+		<module>bps-spark-integration</module>
+		<module>bps-flink-integration</module>
+	</modules>
+</project>

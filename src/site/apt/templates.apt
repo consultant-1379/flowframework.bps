@@ -1,0 +1,21 @@
+	------
+	Templates
+	------
+
+Templates
+
+
+	
+	AIA provides templating functionality where user can select different templates supported by BPS. \
+	User can refer to {{{http://analytics.ericsson.se/paas-ui/index.html#create-app } AIA application builder }} and opt for any template to build new application.
+	
+	
+	At the moment, BPS provides templates depicted below:
+	
+	
+	
+[./images/templates.jpg]
+	
+	
+
+		

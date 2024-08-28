@@ -1,0 +1,3 @@
+com.ericsson.component.aia.common.service.loader.spi.impl.FileInputStreamService
+com.ericsson.component.aia.common.service.loader.spi.impl.HdfsInputStreamService
+com.ericsson.component.aia.common.service.loader.spi.impl.JdbcInputStreamService

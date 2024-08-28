@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>bps-core</artifactId>
+	<name>Beam Processing Core Service</name>
+	<parent>
+		<groupId>com.ericsson.component.aia.bps.service</groupId>
+		<artifactId>bps-service</artifactId>
+		<version>1.0.15-SNAPSHOT</version>
+	</parent>
+	<properties>
+		<version.metamodels>2.0.15</version.metamodels>
+		<commons-configuration.version>1.7</commons-configuration.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.ericsson.component.aia.bps.service</groupId>
+			<artifactId>common-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ericsson.oss.itpf.datalayer.modeling</groupId>
+			<artifactId>metamodels-xsd</artifactId>
+			<version>${version.metamodels}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>${commons-configuration.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

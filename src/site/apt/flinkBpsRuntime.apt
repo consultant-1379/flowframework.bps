@@ -1,0 +1,10 @@
+	------
+	The Flink Runtime
+	------
+
+The Flink Runtime
+
+
+[./images/flink_small.jpg]
+	
+	Apache Flink is a community-driven open source framework for distributed big data analytics, like Hadoop and Spark. The core of Apache Flink is a distributed streaming dataflow engine written in Java and Scala.

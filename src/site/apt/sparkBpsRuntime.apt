@@ -1,0 +1,25 @@
+	------
+	The Spark Runtime
+	------
+
+The Spark Runtime
+
+
+[./images/spark_small.jpg]
+	
+	Spark is an open source processing engine built around speed, ease of use, and analytics. If you have large amounts of data that requires low latency processing that a typical MapReduce program cannot provide, Spark is the way to go.\ 
+	
+	BPS leverage the Spark support through SPI. In order to utilize feature of Spark within BPS, following BPS specific {{{./bpsSpi.html}SPI}} is enabled.
+	
+		* BPS Spark Data Source
+	
+			BPS support many data sources that can be configured as input to the pipeline {{{./sparkDataSource.html}click here for more details}}.
+		
+		* BPS Spark JobRunner 
+			
+			BPS support many jobrunner in order to process multiple input data sources and apply specific business logic on it  {{{./sparkjobrunner.html}click here for more details}}.
+			
+		* BPS Spark Data Sink  
+			
+			BPS support many data sink implementation by which processed data can be persist   {{{./sparkDataSink.html}click here for more details}}.
+			 
